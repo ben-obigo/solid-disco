@@ -6,9 +6,9 @@ export default {
   target: 'static',
 
   // Router base
-  router: {
-    base: '/solid-disco/'
-  },
+  // router: {
+  //   base: '/solid-disco/'
+  // },
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
