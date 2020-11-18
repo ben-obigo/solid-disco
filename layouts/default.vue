@@ -1,5 +1,7 @@
 <template>
   <div>
+    <Visits />
+    <NuxtLink to="/user">User</NuxtLink>
     <Nuxt />
   </div>
 </template>

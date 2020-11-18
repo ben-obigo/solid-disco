@@ -5,10 +5,11 @@ export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
 
-  // Router base
-  // router: {
-  //   base: '/solid-disco/'
-  // },
+  // Router
+  router: {
+    // base: '/solid-disco/',
+    middleware: ['visits', 'user-agent']
+  },
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -29,6 +30,8 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
+    '~/plugins/axios.js',
+    // '~/plugins/vue-notifications.js',
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -43,7 +46,10 @@ export default {
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+
+    // Passing options directly
+    ['~/modules/example', { token: '123' }]
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
